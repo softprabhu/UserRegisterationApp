@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+ -->
+<body>
+
+
+<script>
+/* var app = angular.module("myApp", []);
+   
+   app.controller("myCtrl", function ($scope, $http) {
+	  $scope.myVar = false;
+	 $scope.formsubmit = function() {
+		 //var firstN =$scope.firstName;
+		 //var lastN =$scope.lastName;
+		 //myVar= false;
+		 $scope.myVar = $scope.myVar = true;
+		 var baseUrl ='http://localhost:8080/api/userdet/user/'+$scope.firstName +'/'+$scope.lastName;
+		// alert(baseUrl);
+		 //alert(myVarw);
+		  $http.get(baseUrl).
+	        then(function(response) {
+	        					
+	           $scope.userDetailsLst = response.data;
+	        });
+	   
+	   
+	 }
+});
+ */
+</script>
+
+
+<div ng-app="myApp" ng-controller="myCtrl"  >
+  <form novalidate>
+    UserName:<br>
+    <input type="text" ng-model="firstName"><br>
+    UserLocation:<br>
+    <input type="text" ng-model="lastName">
+    <br><br>
+    <button ng-click="formsubmit()">SUBMIT</button>
+    
+        <div ng-show="myVar">
+			<p>Welcome :  {{userDetailsLst.userName}}</p>
+			<p>Your Role  is : {{userDetailsLst.userRole}}</p>
+			<p>Your Location   is : {{userDetailsLst.userLocation}}</p>
+			<p>Your Registered Email   is : {{userDetailsLst.userEmail}}</p>
+		</div>
+  </form>
+  
+</div>
+
+
+
+
+</body>
+</html>

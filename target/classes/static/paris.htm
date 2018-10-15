@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  -->
+<body>
+
+
+<script>
+
+</script>
+
+
+<div ng-app="myApp" ng-controller="myCtrl"  >
+  <form novalidate>
+    UserName:<br>
+    <input type="text" ng-model="firstName"><br>
+    UserLocation:<br>
+    <input type="text" ng-model="lastName">
+    <br><br>
+    <button ng-click="formsubmit()">SUBMIT</button>
+    
+        <div ng-show="myVar">
+			<p>Welcome :  {{userDetailsLst.userName}}</p>
+			<p>Your Role  is : {{userDetailsLst.userRole}}</p>
+			<p>Your Location   is : {{userDetailsLst.userLocation}}</p>
+			<p>Your Registered Email   is : {{userDetailsLst.userEmail}}</p>
+		</div>
+  </form>
+  
+</div>
+
+
+
+
+</body>
+</html>
